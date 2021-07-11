@@ -10,7 +10,7 @@
 # Задаем переменные скрипта.
 # Объявление $PATH обязательно, если скрипт в процессе работы ругается на ненайденные команды.
 #
-export PATH="/run/wrappers/bin:/root/.nix-profile/bin:/etc/profiles/per-user/root/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ProtonIF="$1"
 ProtonIP="$4"
 ProtonNetMask="$5"
