@@ -8,3 +8,11 @@ echo "deb http://build.openvpn.net/debian/openvpn/stable $(lsb_release -cs) main
 
 ## Install Openvpn
 apt update && apt -y install openvpn
+
+
+if [[ $(crontab -l | grep -vE "^[[:blank:]](#|$)" | grep -q 'some_command'; echo $?) == 1 ]]
+then
+    set -f
+    echo $(crontab -l ; echo '* 1 * * * some_command') | crontab -
+    set +f
+fi
