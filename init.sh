@@ -7,4 +7,4 @@ wget -qO- https://swupdate.openvpn.net/repos/repo-public.gpg | apt-key add -
 echo "deb http://build.openvpn.net/debian/openvpn/stable $(lsb_release -cs) main" > /etc/apt/sources.list.d/openvpn.list
 
 ## Install Openvpn
-apt update && apt install openvpn
+apt update && apt -y install openvpn
